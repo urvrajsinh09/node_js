@@ -16,7 +16,8 @@ const fs = require('fs');
 // });
 // console.log('Reading File...');
 // Part - 2 Call Back Hell
-const textIn = fs.readFile('1-node-farm/starter/txt/start.txt', 'utf-8' ,(err,data1)=>{
+const textIn = fs.readFile('1-node-farm/starter/txt/staddrt.txt', 'utf-8' ,(err,data1)=>{
+    if(err) return console.log(`ERROR! : ${err}`);
     fs.readFile(`1-node-farm/starter/txt/${data1}.txt`, 'utf-8' ,(err,data2)=>{
         console.log(data2);
         fs.readFile('1-node-farm/starter/txt/append.txt','utf-8',(err,data3)=>{
